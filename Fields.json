@@ -1,0 +1,1543 @@
+[
+    {
+        "dbFieldName": "time",
+        "aiFieldName": "dateAndTime",
+        "uiFieldName": "Time",
+        "rootFieldName": "date_1",
+        "filterFieldName": "Time",
+        "filterType": "twoCalendars|presetDates",
+        "source": "external-api",
+        "dataType": "date",
+        "positions": [
+            "heading"
+        ],
+        "options": [],
+        "visibilityCondition": "true",
+        "hideUiFieldName": false,
+        "filter": true,
+        "style": ""
+    },
+    {
+        "dbFieldName": "direction",
+        "aiFieldName": "callDirection",
+        "uiFieldName": "Direction",
+        "rootFieldName": "string_4",
+        "filterFieldName": "Direction",
+        "filterType": "dropdown",
+        "source": "external-api",
+        "dataType": "string",
+        "positions": [
+            "heading"
+        ],
+        "options": [
+            "Any",
+            "inbound",
+            "outbound",
+            "internal",
+            "unidentified"
+        ],
+        "visibilityCondition": "true",
+        "hideUiFieldName": false,
+        "filter": true,
+        "style": ""
+    },
+    {
+        "dbFieldName": "callType",
+        "aiFieldName": "callType",
+        "uiFieldName": "Call Type",
+        "rootFieldName": "string_3",
+        "filterFieldName": "Call Type",
+        "filterType": "dropdown",
+        "source": "external-api",
+        "dataType": "string",
+        "positions": [
+            "heading"
+        ],
+        "options": [
+            "Any",
+            "prospect-calling-into-sales",
+            "customer-calling-into-support",
+            "external-to-agent",
+            "agent-to-external",
+            "agent-to-support",
+            "agent-to-agent",
+            "unidentified"
+        ],
+        "visibilityCondition": "true",
+        "hideUiFieldName": false,
+        "filter": true,
+        "style": ""
+    },
+    {
+        "dbFieldName": "campaign",
+        "aiFieldName": "queueName",
+        "uiFieldName": "Campaign",
+        "rootFieldName": "string_5",
+        "filterFieldName": "Campaign",
+        "filterType": "dropdown",
+        "source": "external-api",
+        "dataType": "string",
+        "positions": [
+            "heading"
+        ],
+        "options": [
+            "Any",
+            "1. RVM James",
+            "2. MAIL - SNAPBACK",
+            "3. LIVE MORT",
+            "4. LIVE TRANSFER USA",
+            "5. RVM 3BUFF",
+            "6. LA-RVM",
+            "7. JS TRANSFER",
+            "8. TV-RADIO",
+            "9. RVM GREEN",
+            "9a. RVM - ORANGE",
+            "9b. DIGITAL - BLUE",
+            "ADDITIONAL SERVICES",
+            "Customer Service",
+            "E-Fax",
+            "FINANCE",
+            "Ovation RingCentral",
+            "OVATION Website",
+            "PRIORITY Queue",
+            "ReMail",
+            "Rollover RVM James",
+            "Service Department (Ring all)",
+            "Test Call Queue"
+        ],
+        "visibilityCondition": "true",
+        "hideUiFieldName": false,
+        "filter": true,
+        "style": ""
+    },
+    {
+        "dbFieldName": "phoneNumber",
+        "aiFieldName": "phoneNumber",
+        "uiFieldName": "Phone Number",
+        "rootFieldName": "string_1",
+        "filterFieldName": "Phone Number",
+        "filterType": "search",
+        "source": "external-api",
+        "dataType": "string",
+        "positions": [
+            "heading"
+        ],
+        "options": [],
+        "visibilityCondition": "true",
+        "hideUiFieldName": false,
+        "filter": true,
+        "style": ""
+    },
+    {
+        "dbFieldName": "agents",
+        "aiFieldName": "advisorNames",
+        "uiFieldName": "Agent(s)",
+        "rootFieldName": "string_2",
+        "filterFieldName": "Agents",
+        "filterType": "search",
+        "source": "external-api",
+        "dataType": "string",
+        "positions": [
+            "heading"
+        ],
+        "options": [],
+        "visibilityCondition": "true",
+        "hideUiFieldName": false,
+        "filter": true,
+        "style": ""
+    },
+    {
+        "dbFieldName": "numberOfSegments",
+        "aiFieldName": "numberOfSegments",
+        "uiFieldName": "# of Seg",
+        "rootFieldName": "integer_1",
+        "filterFieldName": "Number of Segments",
+        "filterType": "numeric",
+        "source": "external-api",
+        "dataType": "integer",
+        "positions": [
+            "heading"
+        ],
+        "options": [],
+        "visibilityCondition": "true",
+        "hideUiFieldName": false,
+        "filter": true,
+        "style": ""
+    },
+    {
+        "dbFieldName": "duration",
+        "aiFieldName": "duration",
+        "uiFieldName": "Duration",
+        "rootFieldName": "decimal_1",
+        "filterFieldName": "Duration",
+        "filterType": "numeric",
+        "source": "external-api",
+        "dataType": "integer",
+        "positions": [
+            "heading"
+        ],
+        "options": [],
+        "visibilityCondition": "true",
+        "hideUiFieldName": false,
+        "filter": true,
+        "style": ""
+    },
+    {
+        "dbFieldName": "inOrOutBound",
+        "aiFieldName": "inOrOutBound",
+        "uiFieldName": "InOrOutBound",
+        "rootFieldName": "",
+        "filterFieldName": "",
+        "filterType": "",
+        "source": "external-api",
+        "dataType": "string",
+        "positions": [],
+        "options": [],
+        "visibilityCondition": "false",
+        "hideUiFieldName": false,
+        "filter": false,
+        "style": ""
+    },
+    {
+        "dbFieldName": "segments",
+        "aiFieldName": "segments",
+        "uiFieldName": "Segments",
+        "rootFieldName": "",
+        "filterFieldName": "",
+        "filterType": "",
+        "source": "external-api",
+        "dataType": "array",
+        "positions": [
+            "tab1"
+        ],
+        "options": [],
+        "visibilityCondition": "true",
+        "hideUiFieldName": false,
+        "filter": false,
+        "style": ""
+    },
+    {
+        "dbFieldName": "name",
+        "aiFieldName": "prospect_name",
+        "uiFieldName": "Name",
+        "rootFieldName": "string_6",
+        "filterFieldName": "Name",
+        "filterType": "search",
+        "source": "llm",
+        "dataType": "string",
+        "positions": [
+            "tab2"
+        ],
+        "options": [],
+        "visibilityCondition": "true",
+        "hideUiFieldName": false,
+        "filter": true,
+        "style": ""
+    },
+    {
+        "dbFieldName": "natureOfTaxProblem",
+        "aiFieldName": "tax_problem_as_per_prospect",
+        "uiFieldName": "Nature of Tax Problem",
+        "rootFieldName": "array_1",
+        "filterFieldName": "Nature of Tax Problem",
+        "filterType": "dropdown",
+        "source": "llm",
+        "dataType": "array of integer codes",
+        "positions": [
+            "tab2"
+        ],
+        "options": [
+            "Has tax debt",
+            "Unfiled returns",
+            "Received letters",
+            "Payment plan",
+            "Collection action",
+            "Other"
+        ],
+        "visibilityCondition": "true",
+        "hideUiFieldName": false,
+        "filter": true,
+        "style": ""
+    },
+    {
+        "dbFieldName": "summaryOfTaxProblem",
+        "aiFieldName": "tax_problem_summary",
+        "uiFieldName": "Summary of Tax Problem",
+        "rootFieldName": "",
+        "filterFieldName": "",
+        "filterType": "",
+        "source": "llm",
+        "dataType": "string",
+        "positions": [
+            "tab2"
+        ],
+        "options": [],
+        "visibilityCondition": "true",
+        "hideUiFieldName": "true",
+        "filter": false,
+        "style": "enclose:round-brackets"
+    },
+    {
+        "dbFieldName": "callDisposition",
+        "aiFieldName": "call_disposition",
+        "uiFieldName": "Call Disposition",
+        "rootFieldName": "string_7",
+        "filterFieldName": "Call Disposition",
+        "filterType": "dropdown",
+        "source": "llm",
+        "dataType": "integer",
+        "positions": [
+            "tab2"
+        ],
+        "options": [
+            "Closed/Won",
+            "Not co-operative",
+            "Prospect Disqualified",
+            "Not enough time",
+            "Lack of trust",
+            "Affordability issue",
+            "Follow up scheduled",
+            "Other"
+        ],
+        "visibilityCondition": "true",
+        "hideUiFieldName": false,
+        "filter": true,
+        "style": ""
+    },
+    {
+        "dbFieldName": "summaryOfCallDisposition",
+        "aiFieldName": "call_disposition_summary",
+        "uiFieldName": "Summary of Call Disposition",
+        "rootFieldName": "",
+        "filterFieldName": "",
+        "filterType": "",
+        "source": "llm",
+        "dataType": "string",
+        "positions": [
+            "tab2"
+        ],
+        "options": [],
+        "visibilityCondition": "true",
+        "hideUiFieldName": "true",
+        "filter": false,
+        "style": "enclose:round-brackets"
+    },
+    {
+        "dbFieldName": "IRSPracCall",
+        "aiFieldName": "did_IRS_agent_join_the_call",
+        "uiFieldName": "IRS Prac Call",
+        "rootFieldName": "boolean_1",
+        "filterFieldName": "IRS Prac Call",
+        "filterType": "boolean",
+        "source": "llm",
+        "dataType": "boolean",
+        "positions": [
+            "tab2"
+        ],
+        "options": [],
+        "visibilityCondition": "true",
+        "hideUiFieldName": false,
+        "filter": true,
+        "style": ""
+    },
+    {
+        "dbFieldName": "IRSAgentNames",
+        "aiFieldName": "names_of_IRS_agents",
+        "uiFieldName": "IRS Agent Name(s)",
+        "rootFieldName": "",
+        "filterFieldName": "",
+        "filterType": "",
+        "source": "llm",
+        "dataType": "array",
+        "positions": [
+            "tab2"
+        ],
+        "options": [],
+        "visibilityCondition": "true",
+        "hideUiFieldName": false,
+        "filter": false,
+        "style": ""
+    },
+    {
+        "dbFieldName": "taxDebtAsPerPracCall",
+        "aiFieldName": "tax_debt_as_per_IRS",
+        "uiFieldName": "Tax Debt as per Prac Call",
+        "rootFieldName": "decimal_2",
+        "filterFieldName": "Tax Debt as per Prac Call",
+        "filterType": "numeric",
+        "source": "llm",
+        "dataType": "float",
+        "positions": [
+            "tab2"
+        ],
+        "options": [],
+        "visibilityCondition": "true",
+        "hideUiFieldName": false,
+        "filter": true,
+        "style": "currency:USD"
+    },
+    {
+        "dbFieldName": "unfiledYearsAsPerPracCall",
+        "aiFieldName": "unfiled_years_as_per_IRS",
+        "uiFieldName": "Unfiled Years as per Prac Call",
+        "rootFieldName": "array_2",
+        "filterFieldName": "Unfiled Years as per Prac Call",
+        "filterType": "search",
+        "source": "llm",
+        "dataType": "array",
+        "positions": [
+            "tab2"
+        ],
+        "options": "Enumerate each year that is unfiled as per the IRS agents as an integer",
+        "visibilityCondition": "true",
+        "hideUiFieldName": false,
+        "filter": true,
+        "style": ""
+    },
+    {
+        "dbFieldName": "IRSPracCallSummary",
+        "aiFieldName": "tax_problem_as_per_IRS_summary",
+        "uiFieldName": "IRS Prac Call Summary",
+        "rootFieldName": "",
+        "filterFieldName": "",
+        "filterType": "",
+        "source": "llm",
+        "dataType": "string",
+        "positions": [
+            "tab2"
+        ],
+        "options": [],
+        "visibilityCondition": "true",
+        "hideUiFieldName": false,
+        "filter": false,
+        "style": ""
+    },
+    {
+        "dbFieldName": "taxDebtAsPerProspect",
+        "aiFieldName": "tax_debt_as_per_prospect",
+        "uiFieldName": "Tax Debt as per Prospect",
+        "rootFieldName": "decimal_3",
+        "filterFieldName": "Tax Debt as per Prospect",
+        "filterType": "numeric",
+        "source": "llm",
+        "dataType": "float",
+        "positions": [
+            "tab2"
+        ],
+        "options": [],
+        "visibilityCondition": "true",
+        "hideUiFieldName": false,
+        "filter": true,
+        "style": "currency:USD"
+    },
+    {
+        "dbFieldName": "taxDebtAsPerProspectStatus",
+        "aiFieldName": "which_is_true_regarding_tax_debt_as_per_prospect",
+        "uiFieldName": "Tax Debt as per Prospect",
+        "rootFieldName": "string_24",
+        "filterFieldName": "Tax Debt as per Prospect Status",
+        "filterType": "dropdown",
+        "source": "llm",
+        "dataType": "integer",
+        "positions": [
+            "tab2"
+        ],
+        "options": [
+            "Agent did not ask",
+            "Prospect did not know",
+            "Prospect refused to share",
+            "Prospect said that the tax debt owed is low",
+            "Prospect said that the tax debt owed is average",
+            "Prospect said that the tax debt owed is high",
+            "Prospect shared the tax debt owed as a numerical value",
+            "Other"
+        ],
+        "visibilityCondition": "if(!taxDebtAsPerProspect)",
+        "hideUiFieldName": false,
+        "filter": true,
+        "style": ""
+    },
+    {
+        "dbFieldName": "unfiledYearsAsPerProspect",
+        "aiFieldName": "unfiled_years_as_per_prospect",
+        "uiFieldName": "Unfiled Years as per Prospect",
+        "rootFieldName": "array_3",
+        "filterFieldName": "Unfiled Years as per Prospect",
+        "filterType": "search",
+        "source": "llm",
+        "dataType": "array",
+        "positions": [
+            "tab2"
+        ],
+        "options": "Enumerate each year that is unfiled as per the prospect as an integer",
+        "visibilityCondition": "true",
+        "hideUiFieldName": false,
+        "filter": false,
+        "style": ""
+    },
+    {
+        "dbFieldName": "owesTaxDebtToState",
+        "aiFieldName": "does_prospect_owe_tax_debt_to_states",
+        "uiFieldName": "Owes Tax Debt to State",
+        "rootFieldName": "boolean_2",
+        "filterFieldName": "Owes Tax Debt to State",
+        "filterType": "boolean",
+        "source": "llm",
+        "dataType": "boolean",
+        "positions": [
+            "tab2"
+        ],
+        "options": [],
+        "visibilityCondition": "true",
+        "hideUiFieldName": false,
+        "filter": true,
+        "style": ""
+    },
+    {
+        "dbFieldName": "statesOwedToAsPerProspect",
+        "aiFieldName": "states_prospect_owes_tax_debt_to",
+        "uiFieldName": "States Owed To as per Prospect",
+        "rootFieldName": "",
+        "filterFieldName": "",
+        "filterType": "",
+        "source": "llm",
+        "dataType": "array",
+        "positions": [
+            "tab2"
+        ],
+        "options": "All 50 US states",
+        "visibilityCondition": "true",
+        "hideUiFieldName": "true",
+        "filter": false,
+        "style": "enclose:round-brackets"
+    },
+    {
+        "dbFieldName": "taxDebtOwedToStates",
+        "aiFieldName": "tax_debt_owed_to_states",
+        "uiFieldName": "Tax Debt Owed To States",
+        "rootFieldName": "decimal_4",
+        "filterFieldName": "Tax Debt Owed To States",
+        "filterType": "numeric",
+        "source": "llm",
+        "dataType": "float",
+        "positions": [
+            "tab2"
+        ],
+        "options": [],
+        "visibilityCondition": "true",
+        "hideUiFieldName": false,
+        "filter": true,
+        "style": "currency:USD"
+    },
+    {
+        "dbFieldName": "job",
+        "aiFieldName": "prospect_job",
+        "uiFieldName": "Job",
+        "rootFieldName": "string_8",
+        "filterFieldName": "Job",
+        "filterType": "search",
+        "source": "llm",
+        "dataType": "string",
+        "positions": [
+            "tab2"
+        ],
+        "options": [],
+        "visibilityCondition": "true",
+        "hideUiFieldName": false,
+        "filter": true,
+        "style": ""
+    },
+    {
+        "dbFieldName": "jobCategory",
+        "aiFieldName": "prospect_job_category",
+        "uiFieldName": "Job Category",
+        "rootFieldName": "string_9",
+        "filterFieldName": "Job Category",
+        "filterType": "dropdown",
+        "source": "llm",
+        "dataType": "integer",
+        "positions": [
+            "tab2"
+        ],
+        "options": [
+            "Blue Collar Employee",
+            "White Collar Employee",
+            "Blue Collar Entrepreneur",
+            "White Collar Entrepreneur",
+            "Unemployed",
+            "Retired",
+            "Other"
+        ],
+        "visibilityCondition": "true",
+        "hideUiFieldName": false,
+        "filter": true,
+        "style": ""
+    },
+    {
+        "dbFieldName": "monthlyIncome",
+        "aiFieldName": "monthly_income",
+        "uiFieldName": "Monthly Income",
+        "rootFieldName": "decimal_5",
+        "filterFieldName": "Monthly Income",
+        "filterType": "numeric",
+        "source": "llm",
+        "dataType": "float",
+        "positions": [
+            "tab2"
+        ],
+        "options": [],
+        "visibilityCondition": "true",
+        "hideUiFieldName": false,
+        "filter": true,
+        "style": "currency:USD"
+    },
+    {
+        "dbFieldName": "monthlyIncomeStatus",
+        "aiFieldName": "which_is_true_regarding_monthly_income",
+        "uiFieldName": "Monthly Income",
+        "rootFieldName": "string_10",
+        "filterFieldName": "Monthly Income Status",
+        "filterType": "dropdown",
+        "source": "llm",
+        "dataType": "integer",
+        "positions": [
+            "tab2"
+        ],
+        "options": [
+            "Agent did not ask",
+            "Prospect did not know",
+            "Prospect refused to share",
+            "Prospect said that their monthly income is low",
+            "Prospect said that their monthly income is average",
+            "Prospect said that their monthly income is high",
+            "Prospect shared the monthly income as a numerical value",
+            "Other"
+        ],
+        "visibilityCondition": "if(!monthlyIncome)",
+        "hideUiFieldName": false,
+        "filter": true,
+        "style": ""
+    },
+    {
+        "dbFieldName": "incomeType",
+        "aiFieldName": "monthly_income_type",
+        "uiFieldName": "Income Type",
+        "rootFieldName": "array_4",
+        "filterFieldName": "Income Type",
+        "filterType": "dropdown",
+        "source": "llm",
+        "dataType": "array of integer codes",
+        "positions": [
+            "tab2"
+        ],
+        "options": [
+            "1099",
+            "W2",
+            "Fixed Income",
+            "Retirement Income",
+            "Disability",
+            "Other"
+        ],
+        "visibilityCondition": "true",
+        "hideUiFieldName": false,
+        "filter": true,
+        "style": ""
+    },
+    {
+        "dbFieldName": "creditScore",
+        "aiFieldName": "credit_score",
+        "uiFieldName": "Credit Score",
+        "rootFieldName": "integer_2",
+        "filterFieldName": "Credit Score",
+        "filterType": "numeric",
+        "source": "llm",
+        "dataType": "integer",
+        "positions": [
+            "tab2"
+        ],
+        "options": [],
+        "visibilityCondition": "true",
+        "hideUiFieldName": false,
+        "filter": true,
+        "style": ""
+    },
+    {
+        "dbFieldName": "creditScoreStatus",
+        "aiFieldName": "which_is_true_regarding_credit_score",
+        "uiFieldName": "Credit Score",
+        "rootFieldName": "string_11",
+        "filterFieldName": "Credit Score Status",
+        "filterType": "dropdown",
+        "source": "llm",
+        "dataType": "integer",
+        "positions": [
+            "tab2"
+        ],
+        "options": [
+            "Agent did not ask",
+            "Prospect did not know",
+            "Prospect refused to share",
+            "Prospect said that their credit score is low",
+            "Prospect said that their credit score is average",
+            "Prospect said that their credit score is high",
+            "Prospect shared the credit score as a numerical value",
+            "Other"
+        ],
+        "visibilityCondition": "if(!creditScore)",
+        "hideUiFieldName": false,
+        "filter": true,
+        "style": ""
+    },
+    {
+        "dbFieldName": "softCreditPullStatus",
+        "aiFieldName": "which_is_true_regarding_soft_credit_pull_request",
+        "uiFieldName": "Soft Credit Pull",
+        "rootFieldName": "string_12",
+        "filterFieldName": "Soft Credit Pull Status",
+        "filterType": "dropdown",
+        "source": "llm",
+        "dataType": "integer",
+        "positions": [
+            "tab2"
+        ],
+        "options": [
+            "Agent did not ask",
+            "Prospect denied permission",
+            "Prospect approved",
+            "Other"
+        ],
+        "visibilityCondition": "true",
+        "hideUiFieldName": false,
+        "filter": true,
+        "style": ""
+    },
+    {
+        "dbFieldName": "homeowner",
+        "aiFieldName": "is_prospect_a_home_owner",
+        "uiFieldName": "Homeowner",
+        "rootFieldName": "boolean_3",
+        "filterFieldName": "Homeowner",
+        "filterType": "boolean",
+        "source": "llm",
+        "dataType": "boolean",
+        "positions": [
+            "tab2"
+        ],
+        "options": [],
+        "visibilityCondition": "true",
+        "hideUiFieldName": false,
+        "filter": true,
+        "style": ""
+    },
+    {
+        "dbFieldName": "homeValue",
+        "aiFieldName": "home_value",
+        "uiFieldName": "Home Value",
+        "rootFieldName": "decimal_6",
+        "filterFieldName": "Home Value",
+        "filterType": "numeric",
+        "source": "llm",
+        "dataType": "float",
+        "positions": [
+            "tab2"
+        ],
+        "options": [],
+        "visibilityCondition": "true",
+        "hideUiFieldName": false,
+        "filter": true,
+        "style": "currency:USD"
+    },
+    {
+        "dbFieldName": "homeValueStatus",
+        "aiFieldName": "which_is_true_regarding_home_value",
+        "uiFieldName": "Home Value",
+        "rootFieldName": "string_13",
+        "filterFieldName": "Home Value Status",
+        "filterType": "dropdown",
+        "source": "llm",
+        "dataType": "integer",
+        "positions": [
+            "tab2"
+        ],
+        "options": [
+            "Agent did not ask",
+            "Prospect did not know",
+            "Prospect refused to share",
+            "Prospect said that their home value is low",
+            "Prospect said that their home value is average",
+            "Prospect said that their home value is high",
+            "Prospect shared the home value as a numerical value",
+            "Other"
+        ],
+        "visibilityCondition": "if(!homeValue)",
+        "hideUiFieldName": false,
+        "filter": true,
+        "style": ""
+    },
+    {
+        "dbFieldName": "mortgageAmount",
+        "aiFieldName": "mortgage_amount",
+        "uiFieldName": "Mortgage Amount",
+        "rootFieldName": "decimal_7",
+        "filterFieldName": "Mortgage Amount",
+        "filterType": "numeric",
+        "source": "llm",
+        "dataType": "float",
+        "positions": [
+            "tab2"
+        ],
+        "options": [],
+        "visibilityCondition": "true",
+        "hideUiFieldName": false,
+        "filter": true,
+        "style": "currency:USD"
+    },
+    {
+        "dbFieldName": "mortgageAmountStatus",
+        "aiFieldName": "which_is_true_regarding_mortgage_amount",
+        "uiFieldName": "Mortgage Amount",
+        "rootFieldName": "string_14",
+        "filterFieldName": "Mortgage Amount Status",
+        "filterType": "dropdown",
+        "source": "llm",
+        "dataType": "integer",
+        "positions": [
+            "tab2"
+        ],
+        "options": [
+            "Agent did not ask",
+            "Prospect did not know",
+            "Prospect refused to share",
+            "Prospect said that their mortgage amount is low",
+            "Prospect said that their mortgage amount is average",
+            "Prospect said that their mortgage amount is high",
+            "Prospect shared the mortgage amount as a numerical value",
+            "Other"
+        ],
+        "visibilityCondition": "if(!mortgageAmount)",
+        "hideUiFieldName": false,
+        "filter": true,
+        "style": ""
+    },
+    {
+        "dbFieldName": "houseRent",
+        "aiFieldName": "house_rent",
+        "uiFieldName": "House Rent",
+        "rootFieldName": "decimal_8",
+        "filterFieldName": "House Rent",
+        "filterType": "numeric",
+        "source": "llm",
+        "dataType": "float",
+        "positions": [
+            "tab2"
+        ],
+        "options": [],
+        "visibilityCondition": "true",
+        "hideUiFieldName": false,
+        "filter": true,
+        "style": "currency:USD"
+    },
+    {
+        "dbFieldName": "houseRentStatus",
+        "aiFieldName": "which_is_true_regarding_house_rent",
+        "uiFieldName": "House Rent",
+        "rootFieldName": "string_15",
+        "filterFieldName": "House Rent Status",
+        "filterType": "dropdown",
+        "source": "llm",
+        "dataType": "integer",
+        "positions": [
+            "tab2"
+        ],
+        "options": [
+            "Agent did not ask",
+            "Prospect did not know",
+            "Prospect refused to share",
+            "Prospect said that their house rent is low",
+            "Prospect said that their house rent is average",
+            "Prospect said that their house rent is high",
+            "Prospect shared the house rent as a numerical value",
+            "Other"
+        ],
+        "visibilityCondition": "if(!houseRent)",
+        "hideUiFieldName": false,
+        "filter": true,
+        "style": ""
+    },
+    {
+        "dbFieldName": "hasOtherAssets",
+        "aiFieldName": "does_prospect_own_other_assets",
+        "uiFieldName": "Has Other Assets",
+        "rootFieldName": "boolean_4",
+        "filterFieldName": "Has Other Assets",
+        "filterType": "boolean",
+        "source": "llm",
+        "dataType": "boolean",
+        "positions": [
+            "tab2"
+        ],
+        "options": [],
+        "visibilityCondition": "true",
+        "hideUiFieldName": false,
+        "filter": true,
+        "style": ""
+    },
+    {
+        "dbFieldName": "otherAssetsBreakdown",
+        "aiFieldName": "breakdown_of_assets_with_values",
+        "uiFieldName": "Other Assets Breakdown",
+        "rootFieldName": "string_16",
+        "filterFieldName": "Other Assets Breakdown",
+        "filterType": "search",
+        "source": "llm",
+        "dataType": "string",
+        "positions": [
+            "tab2"
+        ],
+        "options": [],
+        "visibilityCondition": "true",
+        "hideUiFieldName": false,
+        "filter": true,
+        "style": ""
+    },
+    {
+        "dbFieldName": "totalValueOfAssets",
+        "aiFieldName": "total_value_of_assets",
+        "uiFieldName": "Total Value Of Assets",
+        "rootFieldName": "decimal_9",
+        "filterFieldName": "Total Value of Assets",
+        "filterType": "numeric",
+        "source": "llm",
+        "dataType": "float",
+        "positions": [
+            "tab2"
+        ],
+        "options": [],
+        "visibilityCondition": "true",
+        "hideUiFieldName": false,
+        "filter": true,
+        "style": "currency:USD"
+    },
+    {
+        "dbFieldName": "assetsStatus",
+        "aiFieldName": "which_is_true_regarding_prospects_other_assets",
+        "uiFieldName": "Total Value of Assets",
+        "rootFieldName": "string_17",
+        "filterFieldName": "Assets Status",
+        "filterType": "dropdown",
+        "source": "llm",
+        "dataType": "integer",
+        "positions": [
+            "tab2"
+        ],
+        "options": [
+            "Agent did not ask",
+            "Prospect did not know",
+            "Prospect refused to share",
+            "Prospect said that the total value of their assets is low",
+            "Prospect said that the total value of their assets is average",
+            "Prospect said that the total value of their assets is high",
+            "Prospect shared the total value of their assets as a numerical value",
+            "Other"
+        ],
+        "visibilityCondition": "if(!totalValueOfAssets)",
+        "hideUiFieldName": false,
+        "filter": true,
+        "style": ""
+    },
+    {
+        "dbFieldName": "prospectBanksWith",
+        "aiFieldName": "prospect_bank_accounts",
+        "uiFieldName": "Prospect Banks With",
+        "rootFieldName": "array_7",
+        "filterFieldName": "Prospect Banks With",
+        "filterType": "search",
+        "source": "llm",
+        "dataType": "array",
+        "positions": [
+            "tab2"
+        ],
+        "options": [],
+        "visibilityCondition": "true",
+        "hideUiFieldName": false,
+        "filter": true,
+        "style": ""
+    },
+    {
+        "dbFieldName": "bankBalance",
+        "aiFieldName": "bank_balance",
+        "uiFieldName": "Bank Balance",
+        "rootFieldName": "decimal_10",
+        "filterFieldName": "Bank Balance",
+        "filterType": "numeric",
+        "source": "llm",
+        "dataType": "float",
+        "positions": [
+            "tab2"
+        ],
+        "options": [],
+        "visibilityCondition": "true",
+        "hideUiFieldName": false,
+        "filter": true,
+        "style": "currency:USD"
+    },
+    {
+        "dbFieldName": "bankBalanceStatus",
+        "aiFieldName": "which_is_true_regarding_bank_balance",
+        "uiFieldName": "Bank Balance",
+        "rootFieldName": "string_18",
+        "filterFieldName": "Bank Balance Status",
+        "filterType": "dropdown",
+        "source": "llm",
+        "dataType": "integer",
+        "positions": [
+            "tab2"
+        ],
+        "options": [
+            "Agent did not ask",
+            "Prospect did not know",
+            "Prospect refused to share",
+            "Prospect said that their bank balance is low",
+            "Prospect said that their bank balance is average",
+            "Prospect said that their bank balance is high",
+            "Prospect shared the bank balance as a numerical value",
+            "Other"
+        ],
+        "visibilityCondition": "if(!bankBalance)",
+        "hideUiFieldName": false,
+        "filter": true,
+        "style": ""
+    },
+    {
+        "dbFieldName": "socialSecurityNumber",
+        "aiFieldName": "social_security_number",
+        "uiFieldName": "Social Security Number",
+        "rootFieldName": "integer_3",
+        "filterFieldName": "Social Security Number",
+        "filterType": "search",
+        "source": "llm",
+        "dataType": "integer",
+        "positions": [
+            "tab2"
+        ],
+        "options": [],
+        "visibilityCondition": "true",
+        "hideUiFieldName": false,
+        "filter": true,
+        "style": ""
+    },
+    {
+        "dbFieldName": "socialSecurityNumberStatus",
+        "aiFieldName": "which_is_true_regarding_social_security_number",
+        "uiFieldName": "Social Security Number",
+        "rootFieldName": "string_19",
+        "filterFieldName": "Social Security Number Status",
+        "filterType": "dropdown",
+        "source": "llm",
+        "dataType": "integer",
+        "positions": [
+            "tab2"
+        ],
+        "options": [
+            "Agent did not ask",
+            "Prospect did not know",
+            "Prospect refused to share",
+            "Prospect shared their SSN",
+            "Other"
+        ],
+        "visibilityCondition": "if(!socialSecurityNumber)",
+        "hideUiFieldName": false,
+        "filter": true,
+        "style": ""
+    },
+    {
+        "dbFieldName": "dateOfBirth",
+        "aiFieldName": "date_of_birth",
+        "uiFieldName": "Date of Birth",
+        "rootFieldName": "date_2",
+        "filterFieldName": "Date of Birth",
+        "filterType": "twoCalendars",
+        "source": "llm",
+        "dataType": "date",
+        "positions": [
+            "tab2"
+        ],
+        "options": [],
+        "visibilityCondition": "true",
+        "hideUiFieldName": false,
+        "filter": true,
+        "style": "date:MMM DD, YYYY"
+    },
+    {
+        "dbFieldName": "dateOfBirthStatus",
+        "aiFieldName": "which_is_true_regarding_date_of_birth",
+        "uiFieldName": "Date of Birth",
+        "rootFieldName": "string_20",
+        "filterFieldName": "Date of Birth Status",
+        "filterType": "dropdown",
+        "source": "llm",
+        "dataType": "integer",
+        "positions": [
+            "tab2"
+        ],
+        "options": [
+            "Agent did not ask",
+            "Prospect refused to share",
+            "Prospect shared their date of birth",
+            "Other"
+        ],
+        "visibilityCondition": "if(!dateOfBirth)",
+        "hideUiFieldName": false,
+        "filter": true,
+        "style": ""
+    },
+    {
+        "dbFieldName": "address",
+        "aiFieldName": "residential_address",
+        "uiFieldName": "Address",
+        "rootFieldName": "string_21",
+        "filterFieldName": "Address",
+        "filterType": "search",
+        "source": "llm",
+        "dataType": "string",
+        "positions": [
+            "tab2"
+        ],
+        "options": [],
+        "visibilityCondition": "true",
+        "hideUiFieldName": false,
+        "filter": true,
+        "style": ""
+    },
+    {
+        "dbFieldName": "addressStatus",
+        "aiFieldName": "which_is_true_regarding_residential_address",
+        "uiFieldName": "Address",
+        "rootFieldName": "string_22",
+        "filterFieldName": "Address Status",
+        "filterType": "dropdown",
+        "source": "llm",
+        "dataType": "integer",
+        "positions": [
+            "tab2"
+        ],
+        "options": [
+            "Agent did not ask",
+            "Prospect refused to share",
+            "Prospect shared their address",
+            "Other"
+        ],
+        "visibilityCondition": "if(!address)",
+        "hideUiFieldName": false,
+        "filter": true,
+        "style": ""
+    },
+    {
+        "dbFieldName": "state",
+        "aiFieldName": "prospect_state_of_residence",
+        "uiFieldName": "State",
+        "rootFieldName": "string_23",
+        "filterFieldName": "State",
+        "filterType": "search",
+        "source": "llm",
+        "dataType": "string",
+        "positions": [
+            "tab2"
+        ],
+        "options": [],
+        "visibilityCondition": "true",
+        "hideUiFieldName": false,
+        "filter": true,
+        "style": ""
+    },
+    {
+        "dbFieldName": "callLanguage",
+        "aiFieldName": "languages_spoken_during_the_call",
+        "uiFieldName": "Call Language",
+        "rootFieldName": "array_6",
+        "filterFieldName": "Call Language",
+        "filterType": "search",
+        "source": "llm",
+        "dataType": "array of strings",
+        "positions": [
+            "tab2"
+        ],
+        "options": [],
+        "visibilityCondition": "true",
+        "hideUiFieldName": false,
+        "filter": true,
+        "style": ""
+    },
+    {
+        "dbFieldName": "followUpScheduled",
+        "aiFieldName": "was_a_followup_discussed",
+        "uiFieldName": "Follow-up Scheduled",
+        "rootFieldName": "boolean_5",
+        "filterFieldName": "Follow-up Scheduled",
+        "filterType": "boolean",
+        "source": "llm",
+        "dataType": "boolean",
+        "positions": [
+            "tab2"
+        ],
+        "options": [],
+        "visibilityCondition": "true",
+        "hideUiFieldName": false,
+        "filter": true,
+        "style": ""
+    },
+    {
+        "dbFieldName": "followUpDateTime",
+        "aiFieldName": "follow_up_date_and_time",
+        "uiFieldName": "Follow-up Date & Time",
+        "rootFieldName": "",
+        "filterFieldName": "",
+        "filterType": "",
+        "source": "llm",
+        "dataType": "string",
+        "positions": [
+            "tab2"
+        ],
+        "options": [],
+        "visibilityCondition": "true",
+        "hideUiFieldName": false,
+        "filter": false,
+        "style": ""
+    },
+    {
+        "dbFieldName": "feeQuoted",
+        "aiFieldName": "service_fee",
+        "uiFieldName": "Fee Quoted",
+        "rootFieldName": "decimal_23",
+        "filterFieldName": "Fee Quoted",
+        "filterType": "numeric",
+        "source": "llm",
+        "dataType": "float",
+        "positions": [
+            "tab2"
+        ],
+        "options": [],
+        "visibilityCondition": "true",
+        "hideUiFieldName": false,
+        "filter": true,
+        "style": "currency:USD"
+    },
+    {
+        "dbFieldName": "feeQuotedStatus",
+        "aiFieldName": "which_is_true_regarding_service_fee",
+        "uiFieldName": "Fee Quoted",
+        "rootFieldName": "string_25",
+        "filterFieldName": "Fee Quoted Status",
+        "filterType": "dropdown",
+        "source": "llm",
+        "dataType": "integer",
+        "positions": [
+            "tab2"
+        ],
+        "options": [
+            "Prospect did not ask",
+            "Agent did not answer",
+            "Agent quoted a fee",
+            "Other"
+        ],
+        "visibilityCondition": "if(!feeQuoted)",
+        "hideUiFieldName": false,
+        "filter": true,
+        "style": ""
+    },
+    {
+        "dbFieldName": "taxProblemStatementAdherence",
+        "aiFieldName": "tax_problem_statement_adherence",
+        "uiFieldName": "Tax Problem statement adherence",
+        "rootFieldName": "decimal_18",
+        "filterFieldName": "Tax Problem statement adherence",
+        "filterType": "numeric",
+        "source": "llm",
+        "dataType": "float",
+        "positions": [
+            "tab4"
+        ],
+        "options": [],
+        "visibilityCondition": "true",
+        "hideUiFieldName": false,
+        "filter": true,
+        "style": "postfix:%"
+    },
+    {
+        "dbFieldName": "softCreditPullStatementAdherence",
+        "aiFieldName": "soft_credit_pull_statement_adherence",
+        "uiFieldName": "Soft Credit Pull statement adherence",
+        "rootFieldName": "decimal_19",
+        "filterFieldName": "Soft Credit Pull statement adherence",
+        "filterType": "numeric",
+        "source": "llm",
+        "dataType": "float",
+        "positions": [
+            "tab4"
+        ],
+        "options": [],
+        "visibilityCondition": "true",
+        "hideUiFieldName": false,
+        "filter": true,
+        "style": "postfix:%"
+    },
+    {
+        "dbFieldName": "IRSAuthorizationStatementAdherence",
+        "aiFieldName": "IRS_call_authorization_statement_adherence",
+        "uiFieldName": "IRS Authorization statement adherence",
+        "rootFieldName": "decimal_20",
+        "filterFieldName": "IRS Authorization statement adherence",
+        "filterType": "numeric",
+        "source": "llm",
+        "dataType": "float",
+        "positions": [
+            "tab4"
+        ],
+        "options": [],
+        "visibilityCondition": "true",
+        "hideUiFieldName": false,
+        "filter": true,
+        "style": "postfix:%"
+    },
+    {
+        "dbFieldName": "incomeAndAssetsScriptAdherence",
+        "aiFieldName": "income_and_assets_script_adherence",
+        "uiFieldName": "Income and Assets Script Adherence",
+        "rootFieldName": "decimal_21",
+        "filterFieldName": "Income and Assets Script Adherence",
+        "filterType": "numeric",
+        "source": "llm",
+        "dataType": "float",
+        "positions": [
+            "tab4"
+        ],
+        "options": [],
+        "visibilityCondition": "true",
+        "hideUiFieldName": false,
+        "filter": true,
+        "style": "postfix:%"
+    },
+    {
+        "dbFieldName": "callConclusionScriptAdherence",
+        "aiFieldName": "call_conclusion_script_adherence",
+        "uiFieldName": "Call Conclusion Script Adherence",
+        "rootFieldName": "decimal_22",
+        "filterFieldName": "Call Conclusion Script Adherence",
+        "filterType": "numeric",
+        "source": "llm",
+        "dataType": "float",
+        "positions": [
+            "tab4"
+        ],
+        "options": [],
+        "visibilityCondition": "true",
+        "hideUiFieldName": false,
+        "filter": true,
+        "style": "postfix:%"
+    },
+    {
+        "dbFieldName": "taxProblem",
+        "aiFieldName": "tax_problem_severity",
+        "uiFieldName": "Tax Problem",
+        "rootFieldName": "decimal_11",
+        "filterFieldName": "Tax Problem",
+        "filterType": "numeric",
+        "source": "llm",
+        "dataType": "float",
+        "positions": [
+            "tab1",
+            "tab3"
+        ],
+        "options": [],
+        "visibilityCondition": "true",
+        "hideUiFieldName": false,
+        "filter": true,
+        "style": "postfix: / 10;viewMode:same-line"
+    },
+    {
+        "dbFieldName": "abilityToPay",
+        "aiFieldName": "ability_to_pay",
+        "uiFieldName": "Ability to Pay",
+        "rootFieldName": "decimal_12",
+        "filterFieldName": "Ability to Pay",
+        "filterType": "numeric",
+        "source": "llm",
+        "dataType": "float",
+        "positions": [
+            "tab1",
+            "tab3"
+        ],
+        "options": [],
+        "visibilityCondition": "true",
+        "hideUiFieldName": false,
+        "filter": true,
+        "style": "postfix: / 10;viewMode:same-line"
+    },
+    {
+        "dbFieldName": "profileCompletion",
+        "aiFieldName": "prospects_profile_completeness",
+        "uiFieldName": "Profile Completion",
+        "rootFieldName": "decimal_13",
+        "filterFieldName": "Profile Completion",
+        "filterType": "numeric",
+        "source": "llm",
+        "dataType": "float",
+        "positions": [
+            "tab1",
+            "tab3"
+        ],
+        "options": [],
+        "visibilityCondition": "true",
+        "hideUiFieldName": false,
+        "filter": true,
+        "style": "postfix: / 10;viewMode:same-line"
+    },
+    {
+        "dbFieldName": "cooperativeness",
+        "aiFieldName": "prospects_cooperativeness",
+        "uiFieldName": "Cooperativeness",
+        "rootFieldName": "decimal_14",
+        "filterFieldName": "Cooperativeness",
+        "filterType": "numeric",
+        "source": "llm",
+        "dataType": "float",
+        "positions": [
+            "tab1",
+            "tab3"
+        ],
+        "options": [],
+        "visibilityCondition": "true",
+        "hideUiFieldName": false,
+        "filter": true,
+        "style": "postfix: / 10;viewMode:same-line"
+    },
+    {
+        "dbFieldName": "agentPerformance",
+        "aiFieldName": "tax_group_agent_performance",
+        "uiFieldName": "Agent Performance",
+        "rootFieldName": "decimal_15",
+        "filterFieldName": "Agent Performance",
+        "filterType": "numeric",
+        "source": "llm",
+        "dataType": "float",
+        "positions": [
+            "tab1",
+            "tab3"
+        ],
+        "options": [],
+        "visibilityCondition": "true",
+        "hideUiFieldName": false,
+        "filter": true,
+        "style": "postfix: / 10;viewMode:same-line"
+    },
+    {
+        "dbFieldName": "compliance",
+        "aiFieldName": "compliance_score",
+        "uiFieldName": "Compliance",
+        "rootFieldName": "decimal_16",
+        "filterFieldName": "Compliance",
+        "filterType": "numeric",
+        "source": "llm",
+        "dataType": "float",
+        "positions": [
+            "tab1",
+            "tab3"
+        ],
+        "options": [],
+        "visibilityCondition": "true",
+        "hideUiFieldName": false,
+        "filter": true,
+        "style": "postfix: / 10;viewMode:same-line"
+    },
+    {
+        "dbFieldName": "scriptAdherence",
+        "aiFieldName": "overall_script_adherence",
+        "uiFieldName": "Script Adherence",
+        "rootFieldName": "decimal_17",
+        "filterFieldName": "Script Adherence",
+        "filterType": "numeric",
+        "source": "llm",
+        "dataType": "float",
+        "positions": [
+            "tab1",
+            "tab3"
+        ],
+        "options": [],
+        "visibilityCondition": "true",
+        "hideUiFieldName": false,
+        "filter": true,
+        "style": "postfix:%;viewMode:same-line"
+    },
+    {
+        "dbFieldName": "callAbstract",
+        "aiFieldName": "call_abstract",
+        "uiFieldName": "Call Abstract",
+        "rootFieldName": "",
+        "filterFieldName": "",
+        "filterType": "",
+        "source": "llm",
+        "dataType": "string",
+        "positions": [
+            "tab1"
+        ],
+        "options": [],
+        "visibilityCondition": "true",
+        "hideUiFieldName": false,
+        "filter": false,
+        "style": ""
+    },
+    {
+        "dbFieldName": "callSummary",
+        "aiFieldName": "call_summary",
+        "uiFieldName": "Call Summary",
+        "rootFieldName": "",
+        "filterFieldName": "",
+        "filterType": "",
+        "source": "llm",
+        "dataType": "string",
+        "positions": [
+            "tab3"
+        ],
+        "options": [],
+        "visibilityCondition": "true",
+        "hideUiFieldName": false,
+        "filter": false,
+        "style": ""
+    },
+    {
+        "dbFieldName": "objectionsSummary",
+        "aiFieldName": "objections_summary",
+        "uiFieldName": "Objections Summary",
+        "rootFieldName": "",
+        "filterFieldName": "",
+        "filterType": "",
+        "source": "llm",
+        "dataType": "string",
+        "positions": [
+            "tab1"
+        ],
+        "options": [],
+        "visibilityCondition": "true",
+        "hideUiFieldName": false,
+        "filter": false,
+        "style": ""
+    },
+    {
+        "dbFieldName": "recommendations",
+        "aiFieldName": "recommendations_to_agent",
+        "uiFieldName": "Recommendations",
+        "rootFieldName": "",
+        "filterFieldName": "",
+        "filterType": "",
+        "source": "llm",
+        "dataType": "string",
+        "positions": [
+            "tab1"
+        ],
+        "options": [],
+        "visibilityCondition": "true",
+        "hideUiFieldName": false,
+        "filter": false,
+        "style": ""
+    }
+]
