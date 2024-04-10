@@ -5,7 +5,6 @@ import { CiSearch } from "react-icons/ci";
 import fieldsArray from "../../Fields.json";
 
 const Home = () => {
-  const [input, setInput] = useState("");
   const wordsToUnderline: any = [];
   fieldsArray.forEach((field) => {
     wordsToUnderline.push(field.uiFieldName);
@@ -32,15 +31,18 @@ const Home = () => {
 
   const renderInputWithUnderline = () => {
     // Create a regular expression pattern to match all phrases
+    const input = divRef.current?.innerText;
     const pattern = new RegExp(wordsToUnderline.join("|"), "gi");
     matchedWords = [];
     // Replace all occurrences of the matched phrases with themselves wrapped in <u> tags
-    const newTextContent = input.replace(pattern, (matched) => {
-      matchedWords.push(matched);
-      return `<u>${matched}</u>`;
-    });
-    if (divRef.current) {
-      divRef.current.innerHTML = newTextContent;
+    if (input) {
+      const newTextContent = input.replace(pattern, (matched) => {
+        matchedWords.push(matched);
+        return `<u>${matched}</u>`;
+      });
+      if (divRef.current) {
+        divRef.current.innerHTML = newTextContent;
+      }
     }
   };
 
@@ -55,7 +57,6 @@ const Home = () => {
             ref={divRef}
             contentEditable="true"
             className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5"
-            onKeyUp={(e: any) => setInput(e.target.innerText)}
             onKeyDown={handleInputKeyDown}
           />
         </div>
