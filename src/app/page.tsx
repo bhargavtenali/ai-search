@@ -15,10 +15,6 @@ const Home = () => {
   const [userInput, setUserInput] = useState("");
   const [selectedFields, setSelectedFields] = useState<any[]>([]);
 
-  const cache: any = useMemo(() => {
-    return {};
-  }, []);
-
   const [openaiApiState, setOpenaiApiState] = useState({
     errorMsg: "",
     apiStatus: apiStatusConstants.initial,
@@ -63,14 +59,8 @@ const Home = () => {
           autocomplete: [],
         });
         try {
-          let data;
-          if (!cache[userInput]) {
-            const response = await axios.post(apiUrl, payload);
-            data = response.data;
-            cache[userInput] = data;
-          } else {
-            data = cache[userInput];
-          }
+          const response = await axios.post(apiUrl, payload);
+          const data = response.data;
           setOpenaiApiState({
             errorMsg: "",
             apiStatus: apiStatusConstants.success,
@@ -117,7 +107,7 @@ const Home = () => {
           });
         }
       }, 1000),
-    [removeSelectedField, cache]
+    [removeSelectedField]
   );
 
   const handleInputChange = (e: any) => {
