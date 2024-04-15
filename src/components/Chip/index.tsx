@@ -26,7 +26,13 @@ const Chip = ({ subString, removeSelectedField }: any) => {
       </div>
     );
   } else {
-    return <span>{` ${subString} `}</span>;
+    return (
+      <span>
+        <span>&nbsp;</span>
+        {subString}
+        <span>&nbsp;</span>
+      </span>
+    );
   }
 };
 

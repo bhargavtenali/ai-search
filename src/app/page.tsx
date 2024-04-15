@@ -99,11 +99,11 @@ const Home = () => {
                 }
                 return <span key={index}>{substr}</span>;
               });
-              if (divRef.current) {
-                divRef.current.innerHTML = "";
-                setJsxElements((prevState) => [...elementsArray]);
-                setSelectedFields(data.message.matchedFields);
-              }
+              // if (divRef.current) {
+              //   divRef.current.innerHTML = "";
+              // }
+              setJsxElements([...elementsArray]);
+              setSelectedFields(data.message.matchedFields);
             }
           }
         } catch (error) {
@@ -137,8 +137,17 @@ const Home = () => {
     ) {
       return (
         <div
+          onClick={() => {
+            setOpenaiApiState({
+              errorMsg: "",
+              apiStatus: apiStatusConstants.initial,
+              matchedFields: [],
+              mongoDBQuery: [],
+              autocomplete: [],
+            });
+          }}
           ref={divRef}
-          className="flex justify-start items-center h-[50px] bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 w-full ps-10 pe-10 p-2.5"
+          className="cursor-text flex justify-start items-center h-[50px] bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 w-full ps-10 pe-10 p-2.5"
         >
           {jsxElements}
         </div>
@@ -146,6 +155,7 @@ const Home = () => {
     } else {
       return (
         <input
+          autoFocus
           value={userInput}
           ref={inputRef}
           className="flex justify-start items-center h-[50px] bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 w-full ps-10 pe-10 p-2.5"
@@ -157,18 +167,7 @@ const Home = () => {
   return (
     <div className="bg-container">
       <div className="w-full h-full flex justify-center items-center">
-        <div
-          className="relative w-[60%]"
-          onKeyDown={() =>
-            setOpenaiApiState({
-              errorMsg: "",
-              apiStatus: apiStatusConstants.initial,
-              matchedFields: [],
-              mongoDBQuery: [],
-              autocomplete: [],
-            })
-          }
-        >
+        <div className="relative w-[60%]">
           <div className="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
             <CiSearch />
           </div>
