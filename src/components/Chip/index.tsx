@@ -7,7 +7,7 @@ const Chip = ({ subString, removeSelectedField }: any) => {
     e.preventDefault();
     e.stopPropagation();
     setRenderPlainText(true);
-    removeSelectedField(subString);
+    if (removeSelectedField) removeSelectedField(subString);
   };
   if (!renderPlainText) {
     return (

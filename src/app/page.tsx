@@ -1,11 +1,19 @@
 "use client";
 
-import React, { useCallback, useMemo, useRef, useState, Fragment } from "react";
+import React, {
+  useCallback,
+  useMemo,
+  useRef,
+  useState,
+  Fragment,
+  useEffect,
+} from "react";
 import { CiSearch } from "react-icons/ci";
 import { IoMdClose } from "react-icons/io";
 import axios from "axios";
 import { apiStatusConstants } from "../../constants";
 import Chip from "@/components/Chip";
+import AutoComplete from "@/components/AutoComplete";
 
 const Home = () => {
   const inputRef = useRef<HTMLInputElement>(null);
@@ -14,6 +22,7 @@ const Home = () => {
   const [jsxElements, setJsxElements] = useState<any[]>([]);
   const [userInput, setUserInput] = useState("");
   const [selectedFields, setSelectedFields] = useState<any[]>([]);
+  const [isOpen, setIsOpen] = useState(false);
 
   const [openaiApiState, setOpenaiApiState] = useState({
     errorMsg: "",
@@ -22,6 +31,45 @@ const Home = () => {
     mongoDBQuery: [],
     autocomplete: [],
   });
+
+  const [dbApiState, setDbApiState] = useState({
+    errorMsg: "",
+    apiStatus: apiStatusConstants.initial,
+    data: "",
+  });
+
+  useEffect(() => {
+    if (openaiApiState.apiStatus === apiStatusConstants.success) {
+      const fetchDbData = async () => {
+        {
+          const dbQuery = openaiApiState.mongoDBQuery;
+          const payload = { dbQuery };
+          const apiUrl = `${process.env.NEXT_PUBLIC_API_URL}/db/query`;
+          setDbApiState({
+            errorMsg: "",
+            apiStatus: apiStatusConstants.inProgress,
+            data: "",
+          });
+          try {
+            const response = await axios.post(apiUrl, payload);
+            setDbApiState({
+              errorMsg: "",
+              apiStatus: apiStatusConstants.success,
+              data: response.data,
+            });
+          } catch (error) {
+            console.error(error);
+            setDbApiState({
+              errorMsg: "",
+              apiStatus: apiStatusConstants.failure,
+              data: "",
+            });
+          }
+        }
+      };
+      fetchDbData();
+    }
+  }, [openaiApiState]);
 
   const fetchDebounce = (callback: any, delay: any) => {
     let timer: any;
@@ -51,6 +99,7 @@ const Home = () => {
         const userInput = inputRef?.current?.value;
         const payload = { userInput };
         const apiUrl = `${process.env.NEXT_PUBLIC_API_URL}/openai/search`;
+        setIsOpen(true);
         setOpenaiApiState({
           errorMsg: "",
           apiStatus: apiStatusConstants.inProgress,
@@ -137,7 +186,7 @@ const Home = () => {
             });
           }}
           ref={divRef}
-          className="cursor-text flex justify-start items-center h-[50px] bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 w-full ps-10 pe-10 p-2.5"
+          className="cursor-text flex justify-start items-center h-[50px] bg-gray-50 border border-gray-300 text-gray-900 text-sm focus:ring-blue-500 focus:border-blue-500 w-full ps-10 pe-10 p-2.5"
         >
           {jsxElements}
         </div>
@@ -148,15 +197,16 @@ const Home = () => {
           autoFocus
           value={userInput}
           ref={inputRef}
-          className="flex justify-start items-center h-[50px] bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 w-full ps-10 pe-10 p-2.5"
+          className="flex justify-start items-center h-[50px] bg-gray-50 border border-gray-300 text-gray-900 text-sm focus:ring-blue-500 focus:border-blue-500 w-full ps-10 pe-10 p-2.5"
           onChange={handleInputChange}
         />
       );
     }
   };
+  console.log(dbApiState.data, "dbApiState.data");
   return (
     <div className="bg-container">
-      <div className="w-full h-full flex justify-center items-center">
+      <div className="relative w-full h-full flex justify-center items-center">
         <div className="relative w-[60%]">
           <div className="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
             <CiSearch />
@@ -171,7 +221,17 @@ const Home = () => {
           >
             <IoMdClose />
           </div>
+          <AutoComplete
+            openaiApiState={openaiApiState}
+            setOpenaiApiState={setOpenaiApiState}
+            isOpen={isOpen}
+            setIsOpen={setIsOpen}
+            setJsxElements={setJsxElements}
+            setSelectedFields={setSelectedFields}
+            setUserInput={setUserInput}
+          />
         </div>
+        {dbApiState.data && dbApiState.data}
       </div>
     </div>
   );
